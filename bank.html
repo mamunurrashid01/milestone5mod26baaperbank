@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bank inside</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <header>
+      <h1 class="text-3xl text-center my-5">
+        let's
+        <span class="text-green-500 font-semibold">get Some Moooooney</span>!!!
+      </h1>
+    </header>
+    <div>
+      <section class="grid xl:grid-cols-3 my-4 gap-4 w-9/12 mx-auto">
+        <div id="deposite" class="bg-green-500 p-5 rounded-md h-32">
+          <p class="text-white font-semibold">Deposit</p>
+          <h2 class="text-white text-4xl font-semibold">
+            $<span id="dAmount">00</span>
+          </h2>
+        </div>
+        <div id="withdraw" class="bg-orange-400 p-5 rounded-md h-32">
+          <p class="text-white font-semibold">Withdraw</p>
+          <h2 class="text-white text-4xl font-semibold">
+            $<span id="withdrawAmount">00</span>
+          </h2>
+        </div>
+        <div id="balance" class="bg-lime-500 p-5 rounded-md h-32">
+          <p class="text-white font-semibold">Balance</p>
+          <h2 class="text-white text-4xl font-semibold">
+            $<span id="balanceAmount">00</span>
+          </h2>
+        </div>
+      </section>
+      <section class="grid xl:grid-cols-2 gap-4 w-9/12 mx-auto">
+        <div id="deposit_amount" class="bg-teal-400 p-5 rounded-md">
+          <p class="text-white font-semibold">Please Deposit</p>
+          <input
+            class="block my-2 p-2 rounded-md ml-20"
+            id="dpositHere"
+            type="text"
+            placeholder="please enter your amount here"
+          />
+          <button
+            id="depo"
+            class="bg-purple-500 p-2 rounded-md w-32 text-white font-semibold ml-20"
+          >
+            Deposit
+          </button>
+        </div>
+        <div id="withdraw_amount" class="bg-sky-400 p-5 rounded-md">
+          <p class="text-white font-semibold">Please Withdraw</p>
+          <input
+            class="block my-2 p-2 rounded-md ml-20"
+            id="withdrawtHere"
+            type="text"
+            placeholder="please enter your amount here"
+          />
+          <button
+            id="withDbtn"
+            class="bg-indigo-600 p-2 rounded-md w-32 text-white font-semibold ml-20"
+          >
+            Withdraw
+          </button>
+        </div>
+      </section>
+    </div>
+    <script src="js/bank.js"></script>
+  </body>
+</html>
