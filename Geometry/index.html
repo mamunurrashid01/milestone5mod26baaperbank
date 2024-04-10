@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>geometry calculation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <header>
+      <h1 class="text-4xl font-bold my-4 text-center text-green-500">
+        Geometry Calculation Discussion
+      </h1>
+    </header>
+    <main class="flex flex-col lg:flex-row w-11/12 mx-auto">
+      <section class="grid sm:grid-cols-2 lg:grid-row-3 gap-4 w-11/12 mx-auto">
+        <div class="bg-green-400 p-8 text-center">
+          <img class="w-32 mx-auto" src="image/triangle.png" alt="" />
+          <h1 class="text-3xl font-semibold">Triangle</h1>
+          <p>Area = 0.5 * b * h</p>
+          <input
+            id="base"
+            class="w-24 md:my-2 mr-2"
+            type="text"
+            placeholder="b"
+          /><span class="mr-2">cm</span
+          ><input
+            id="height"
+            class="w-24 mr-2 sm:-ml-2"
+            type="text"
+            placeholder="h"
+          /><span>cm</span>
+          <p>
+            Area: <span id="Tarea">00</span> cm<span><sup>2</sup></span>
+          </p>
+          <button
+            onclick="getBaseHeightOfTriangle()"
+            class="block text-center w-full mt-3 bg-purple-500 py-3 text-white font-semibold"
+          >
+            Calculate
+          </button>
+        </div>
+        <div class="bg-green-400 p-8 text-center">
+          <img class="w-32 mx-auto" src="image/rectangle.png" alt="" />
+          <h1 class="text-3xl font-semibold">Rectangle</h1>
+          <p>Area = l * w</p>
+          <input
+            id="l"
+            class="w-24 mr-2 md:mb-2"
+            type="text"
+            placeholder="l"
+          /><span class="mr-2">cm</span
+          ><input
+            id="w"
+            class="w-24 mr-2 sm:-ml-2"
+            type="text"
+            placeholder="w"
+          /><span>cm</span>
+          <p>
+            Area: <span id="Recarea">00</span> cm<span><sup>2</sup></span>
+          </p>
+          <button
+            onclick="getRectanglerValue()"
+            class="block text-center w-full mt-3 bg-purple-500 py-3 text-white font-semibold"
+          >
+            Calculate
+          </button>
+        </div>
+        <div class="bg-green-400 p-8 text-center">
+          <img class="w-32 mx-auto" src="image/parallelogram.png" alt="" />
+          <h1 class="text-3xl font-semibold">Parallelogram</h1>
+          <p>Area = b * h</p>
+          <input class="w-24 mr-2 md:mb-2" type="text" placeholder="b" /><span
+            class="mr-2"
+            >cm</span
+          ><input class="w-24 mr-2 sm:-ml-2" type="text" placeholder="h" /><span
+            >cm</span
+          >
+          <p>
+            Area: <span id="Parea">00</span> cm<span><sup>2</sup></span>
+          </p>
+          <button
+            class="block text-center w-full mt-3 bg-purple-500 py-3 text-white font-semibold"
+          >
+            Calculate
+          </button>
+        </div>
+        <div class="bg-green-400 p-8 text-center">
+          <img class="w-32 mx-auto" src="image/rhombus.png" alt="" />
+          <h1 class="text-3xl font-semibold">Rhombus</h1>
+          <p>Area = 0.5 * d1 * d2</p>
+          <input
+            id="d1"
+            class="w-24 mr-2 md:mb-2"
+            type="text"
+            placeholder="d1"
+          /><span class="mr-2">cm</span
+          ><input
+            id="d2"
+            class="w-24 mr-2 sm:-ml-2"
+            type="text"
+            placeholder="d2"
+          /><span>cm</span>
+          <p>Area: <span id="Rharea">00</span> cm<sup>2</sup></p>
+          <button
+            onclick="calculationRhombus()"
+            class="block text-center w-full mt-3 bg-purple-500 py-3 text-white font-semibold"
+          >
+            Calculate
+          </button>
+        </div>
+        <div class="bg-green-400 p-8 text-center">
+          <img class="w-32 mx-auto" src="image/pentagon.png" alt="" />
+          <h1 class="text-3xl font-semibold">Pentagon</h1>
+          <p>Area = 0.5 * p * b</p>
+          <input class="w-24 mr-2 md:mb-2" type="text" placeholder="p" /><span
+            class="mr-2"
+            >cm</span
+          ><input class="w-24 mr-2 sm:-ml-2" type="text" placeholder="b" /><span
+            >cm</span
+          >
+          <p>Area: <span id="Pearea">00</span> cm<sup>2</sup></p>
+          <button
+            class="block text-center w-full mt-3 bg-purple-500 py-3 text-white font-semibold"
+          >
+            Calculate
+          </button>
+        </div>
+        <div class="bg-green-400 p-8 text-center">
+          <img class="w-32 mx-auto" src="image/ellipse.png" alt="" />
+          <h1 class="text-3xl font-semibold">Ellips</h1>
+          <p>Area = pi * a * b</p>
+          <input
+            id=""
+            class="w-24 mr-2 mb-2"
+            type="text"
+            placeholder="a"
+          /><span class="mr-2">cm</span
+          ><input class="w-24 mr-2 sm:-ml-2" type="text" placeholder="b" /><span
+            >cm</span
+          >
+          <p>Area: <span id="Earea">00</span> cm<sup>2</sup></p>
+          <button
+            class="block text-center w-full mt-3 bg-purple-500 py-3 text-white font-semibold"
+          >
+            Calculate
+          </button>
+        </div>
+      </section>
+      <section
+        id="calSec"
+        class="w-60 bg-amber-500 text-2xl font-semibold p-8 border-l-2 border-cyan-800"
+      >
+        Calculation showing here
+        <h1>Here is the result: <span id="result">00</span> cm<sup>2</sup></h1>
+      </section>
+    </main>
+    <script src="js/index.js"></script>
+  </body>
+</html>
